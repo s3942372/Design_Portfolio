@@ -34,6 +34,12 @@ function handleCommand(command) {
         case 'minigames':
             loadMinigames();
             return;
+        case 'args':
+            loadARGs();
+            return;
+        case 'videos':
+            loadVideos();
+            return;
         default:
             response = `Unknown command: ${command}`;
     }
@@ -64,11 +70,11 @@ function loadUIDesigns() {
 function loadMinigames() {
     const games = [
         { 
-            url: 'https://scratch.mit.edu/projects/1075088739', 
+            url: 'https://scratch.mit.edu/projects/1075088739/embed', 
             text: "Punchin' Time!: a game about school violence, and the things that cause it." 
         },
         { 
-            url: 'https://scratch.mit.edu/projects/1075341974', 
+            url: 'https://scratch.mit.edu/projects/1075341974/embed', 
             text: "Drifting Off: a game about sleep deprivation, and how it impacts your work." 
         },
     ];
@@ -82,4 +88,50 @@ function loadMinigames() {
 
     output.innerHTML += `<br>`;
     output.scrollTop = output.scrollHeight;
+}
+
+function loadARGs() {
+    const args = [
+        { 
+            url: 'https://s3942372.wixsite.com/lunarchive', 
+            text: "An alternate reality game featuring Australia's very own Luna Park for promotional purposes."
+        },
+        { 
+            url: 'https://s3942372.wixsite.com/lyaeusecofoundation', 
+            text: "An alternate reality game featuring real-world puzzles and elements, linking to a sordid past within the United State's CIA." 
+        },
+    ];
+
+    output.innerHTML += `> args\nLoading ARGs...\n`;
+    
+    args.forEach(arg => {
+        output.innerHTML += `<div>${arg.text}</div>`;
+        output.innerHTML += `<iframe src="${arg.url}" style="width: 300px; height: 200px; border: none;"></iframe>`;
+    });
+
+    output.innerHTML += `<br>`;
+    output.scrollTop = output.scrollHeight;
+}
+
+function loadVideos() {
+    const videos = [
+        { 
+            url: 'https://player.vimeo.com/video/736524470?h=b4baf58fda', 
+            text: "Alone at Home: a slow horror about a young boy and a mysterious stranger new to the neighbourhood." 
+        },
+        { 
+            url: 'https://player.vimeo.com/video/1023286780?h=281f42b367', 
+            text: "Aberrant Ingress: an analogue horror short film made using AI generated images inspired by Cold War era government PSAs and the fear of what is considered 'other'." 
+        },
+    ];
+
+    output.innerHTML += `> videos\nLoading Videos...\n`;
+    
+    videos.forEach(video => {
+        output.innerHTML += `<div>${video.text}</div>`;
+        output.innerHTML += `<iframe src="${video.url}" style="width: 300px; height: 200px; border: none;"></iframe>`;
+    });
+
+    output.innerHTML += `<br>`;
+    output.scrollTop = output.scrollHeight; // Auto-scroll to bottom
 }
