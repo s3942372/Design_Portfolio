@@ -43,6 +43,9 @@ function handleCommand(command) {
         case 'simulations':
             loadSimulations();
             return;
+        case 'contacts':
+            loadContactInfo();
+            return;
         default:
             response = `Unknown command: ${command}`;
     }
@@ -156,6 +159,24 @@ function loadSimulations() {
     simulations.forEach(simulation => {
         output.innerHTML += `<div>${simulation.text}</div>`;
         output.innerHTML += `<iframe src="${simulation.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
+    });
+
+    output.innerHTML += `<br>`;
+    output.scrollTop = output.scrollHeight; 
+}
+
+function loadContactInfo() {
+    const contacts = [
+        { name: 'Twitter', url: 'https://twitter.com/yourprofile' },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/charlene-xu/' },
+        { name: 'GitHub', url: 'https://github.com/yourprofile' },
+        { name: 'Instagram', url: 'https://instagram.com/yourprofile' },
+    ];
+
+    output.innerHTML += `> contact\nLoading Contact Info...\n`;
+    
+    contacts.forEach(contact => {
+        output.innerHTML += `<div><a href="${contact.url}" target="_blank" style="color: red;">${contact.name}</a></div>`;
     });
 
     output.innerHTML += `<br>`;
