@@ -167,10 +167,10 @@ function loadSimulations() {
 
 function loadContactInfo() {
     const contacts = [
-        { name: 'Twitter', url: 'https://twitter.com/yourprofile' },
+        { name: 'Twitter', url: 'https://x.com/c_xxy_xu' },
+        { name: 'Instagram', url: 'https://www.instagram.com/c_xxy_xu?igsh=NTc4MTIwNjQ2YQ==' },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/in/charlene-xu/' },
-        { name: 'GitHub', url: 'https://github.com/yourprofile' },
-        { name: 'Instagram', url: 'https://instagram.com/yourprofile' },
+        { name: 'GitHub', url: 'https://github.com/s3942372' },
     ];
 
     output.innerHTML += `> contact\nLoading Contact Info...\n`;
