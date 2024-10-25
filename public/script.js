@@ -40,6 +40,9 @@ function handleCommand(command) {
         case 'videos':
             loadVideos();
             return;
+        case 'simulations':
+            loadSimulations();
+            return;
         default:
             response = `Unknown command: ${command}`;
     }
@@ -133,5 +136,28 @@ function loadVideos() {
     });
 
     output.innerHTML += `<br>`;
-    output.scrollTop = output.scrollHeight; // Auto-scroll to bottom
+    output.scrollTop = output.scrollHeight; 
+}
+
+function loadSimulations() {
+    const simulations = [
+        { 
+            url: 'https://s3942372.github.io/im-2310/a3/', 
+            text: "Buddy Simulator: a satire look into what the future of AI-driven therapists would be." 
+        },
+        { 
+            url: 'https://s3942372-ccs-a3.deno.dev/', 
+            text: "Interview Simulator: a satirical study on current generations, and their over-reliance on AI for conversation and companionship, as well as a study on how AI may replace certain aspects of the hiring process in a workforce." 
+        },
+    ];
+
+    output.innerHTML += `> simulations\nLoading Simulations...\n`;
+    
+    simulations.forEach(simulation => {
+        output.innerHTML += `<div>${simulation.text}</div>`;
+        output.innerHTML += `<iframe src="${simulation.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
+    });
+
+    output.innerHTML += `<br>`;
+    output.scrollTop = output.scrollHeight; 
 }
