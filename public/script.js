@@ -83,7 +83,7 @@ function loadMinigames() {
     
     games.forEach(game => {
         output.innerHTML += `<div>${game.text}</div>`;
-        output.innerHTML += `<iframe src="${game.url}" style="width: 300px; height: 200px; border: none;"></iframe>`;
+        output.innerHTML += `<iframe src="${game.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -106,7 +106,7 @@ function loadARGs() {
     
     args.forEach(arg => {
         output.innerHTML += `<div>${arg.text}</div>`;
-        output.innerHTML += `<iframe src="${arg.url}" style="width: 300px; height: 200px; border: none;"></iframe>`;
+        output.innerHTML += `<iframe src="${arg.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -129,7 +129,7 @@ function loadVideos() {
     
     videos.forEach(video => {
         output.innerHTML += `<div>${video.text}</div>`;
-        output.innerHTML += `<iframe src="${video.url}" style="width: 300px; height: 200px; border: none;"></iframe>`;
+        output.innerHTML += `<iframe src="${video.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
