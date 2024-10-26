@@ -14,7 +14,7 @@ function handleCommand(command) {
 
     switch (command.toLowerCase()) {
         case 'help':
-            response = 'Available commands: help, clear, date, hello, ui designs, minigames';
+            response = 'Available commands: help, clear, date, hello, about, ui designs, minigames, args, videos, simulations, contacts';
             break;
         case 'clear':
             output.innerHTML = '';
@@ -23,11 +23,11 @@ function handleCommand(command) {
             response = new Date().toString();
             break;
         case 'hello':
-            response = 'Hello, User!';
+            response = 'Hello, and welcome to my portfolio!';
             break;
         case 'about':
-            output.innerHTML = "An avid lover of both interaction design and storytelling, Charlene Xu enjoys crafting engaging narrative experiences through thoughtful design and gamification. Having studied at RMIT University in the <br>Bachelor's Degree of Design (Digital Media), she has a great amount of interest and passion in games and gamified experiences that not only captivate users but also immerse them in compelling narratives. <br>Willing to explore new innovative ways to blend aesthetics with gameplay elements to enhance user engagement, Charlene wishes to make it in the games industry as a narrative and interface designer.";
-            return;
+            response = "An avid lover of both interaction design and storytelling, Charlene Xu enjoys crafting engaging narrative experiences through thoughtful design and gamification. Having studied at RMIT University in the Bachelor's Degree of Design (Digital Media), she has a great amount of interest and passion in games and gamified experiences that not only captivate users but also immerse them in compelling narratives. Willing to explore new innovative ways to blend aesthetics with gameplay elements to enhance user engagement, Charlene wishes to make it in the games industry as a narrative and interface designer.";
+            break;
         case 'ui designs':
             loadUIDesigns();
             return;
@@ -89,7 +89,7 @@ function loadMinigames() {
     
     games.forEach(game => {
         output.innerHTML += `<div>${game.text}</div>`;
-        output.innerHTML += `<iframe src="${game.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
+        output.innerHTML += `<iframe src="${game.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -112,7 +112,7 @@ function loadARGs() {
     
     args.forEach(arg => {
         output.innerHTML += `<div>${arg.text}</div>`;
-        output.innerHTML += `<iframe src="${arg.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
+        output.innerHTML += `<iframe src="${arg.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -135,7 +135,7 @@ function loadVideos() {
     
     videos.forEach(video => {
         output.innerHTML += `<div>${video.text}</div>`;
-        output.innerHTML += `<iframe src="${video.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
+        output.innerHTML += `<iframe src="${video.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -158,7 +158,7 @@ function loadSimulations() {
     
     simulations.forEach(simulation => {
         output.innerHTML += `<div>${simulation.text}</div>`;
-        output.innerHTML += `<iframe src="${simulation.url}" style="width: 600px; height: 400px; border: none;"></iframe>`;
+        output.innerHTML += `<iframe src="${simulation.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
