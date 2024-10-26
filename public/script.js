@@ -57,7 +57,7 @@ function handleCommand(command) {
 function loadUIDesigns() {
     const designs = [
         { 
-            img: 'https://via.placeholder.com/150', 
+            url: 'https://embed.figma.com/proto/MTM3MlecblyoMoPfybAT7R/ShareCare-Backup?node-id=2-637&starting-point-node-id=2%3A637&embed-host=share', 
             text: 'ShareCare, a community app focused on sharing food with everyone.' 
         },
     ];
@@ -65,8 +65,8 @@ function loadUIDesigns() {
     output.innerHTML += `> ui designs\nLoading UI Designs...\n`;
     
     designs.forEach(design => {
-        output.innerHTML += `<img src="${design.img}" alt="UI Design" style="width: 150px; height: auto; display: inline-block; margin: 5px;">`;
-        output.innerHTML += `<div>${design.text}</div>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${design.text}</div>`;
+        output.innerHTML += `<iframe src="${design.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -88,8 +88,8 @@ function loadMinigames() {
     output.innerHTML += `> minigames\nLoading Minigames...\n`;
     
     games.forEach(game => {
-        output.innerHTML += `<div>${game.text}</div>`;
-        output.innerHTML += `<iframe src="${game.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${game.text}</div>`;
+        output.innerHTML += `<iframe src="${game.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -111,8 +111,8 @@ function loadARGs() {
     output.innerHTML += `> args\nLoading ARGs...\n`;
     
     args.forEach(arg => {
-        output.innerHTML += `<div>${arg.text}</div>`;
-        output.innerHTML += `<iframe src="${arg.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${arg.text}</div>`;
+        output.innerHTML += `<iframe src="${arg.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -134,8 +134,8 @@ function loadVideos() {
     output.innerHTML += `> videos\nLoading Videos...\n`;
     
     videos.forEach(video => {
-        output.innerHTML += `<div>${video.text}</div>`;
-        output.innerHTML += `<iframe src="${video.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${video.text}</div>`;
+        output.innerHTML += `<iframe src="${video.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -157,8 +157,8 @@ function loadSimulations() {
     output.innerHTML += `> simulations\nLoading Simulations...\n`;
     
     simulations.forEach(simulation => {
-        output.innerHTML += `<div>${simulation.text}</div>`;
-        output.innerHTML += `<iframe src="${simulation.url}" style="width: 1000px; height: 750px; border: none;"></iframe>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${simulation.text}</div>`;
+        output.innerHTML += `<iframe src="${simulation.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -176,7 +176,7 @@ function loadContactInfo() {
     output.innerHTML += `> contact\nLoading Contact Info...\n`;
     
     contacts.forEach(contact => {
-        output.innerHTML += `<div><a href="${contact.url}" target="_blank" style="color: red;">${contact.name}</a></div>`;
+        output.innerHTML += `<div style="margin-top: 10px;"><a href="${contact.url}" target="_blank" style="color: red;">${contact.name}</a></div>`;
     });
 
     output.innerHTML += `<br>`;
