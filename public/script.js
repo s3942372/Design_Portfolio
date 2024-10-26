@@ -46,6 +46,9 @@ function handleCommand(command) {
         case 'contacts':
             loadContactInfo();
             return;
+        case 'cv':
+            loadCV();
+            return;
         default:
             response = `Unknown command: ${command}`;
     }
@@ -177,6 +180,25 @@ function loadContactInfo() {
     
     contacts.forEach(contact => {
         output.innerHTML += `<div style="margin-top: 10px;"><a href="${contact.url}" target="_blank" style="color: red;">${contact.name}</a></div>`;
+    });
+
+    output.innerHTML += `<br>`;
+    output.scrollTop = output.scrollHeight; 
+}
+
+function loadCV() {
+    const cvDocument = [
+        {
+            url: 'https://www.canva.com/design/DAGUr14n5xE/2U21OiJiCD17pBOvtldUOQ/view?embed',
+            text: "Feel free to take a look at or download my CV." 
+        },
+    ];
+
+    output.innerHTML += `> cv\nLoading CV...\n`;
+    
+    cvDocument.forEach(cv => {
+        output.innerHTML += `<div style="margin-top: 10px;">${cv.text}</div>`;
+        output.innerHTML += `<iframe src="${cv.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
