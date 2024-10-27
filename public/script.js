@@ -14,7 +14,7 @@ function handleCommand(command) {
 
     switch (command.toLowerCase()) {
         case 'help':
-            response = 'Available commands: help, clear, date, hello, about, ui designs, minigames, args, videos, simulations, contacts';
+            response = 'Available commands: help, clear, date, hello, about, ui designs, minigames, args, videos, simulations, contacts, cv';
             break;
         case 'clear':
             output.innerHTML = '';
@@ -26,7 +26,7 @@ function handleCommand(command) {
             response = 'Hello, and welcome to my portfolio!';
             break;
         case 'about':
-            response = "An avid lover of both interaction design and storytelling, <br />Charlene Xu enjoys crafting engaging narrative experiences through thoughtful design and gamification. <br />Having studied at RMIT University in the Bachelor's Degree of Design (Digital Media), <br />she has a great amount of interest and passion in games and gamified experiences that not only captivate users but also immerse them in compelling narratives. <br />Willing to explore new innovative ways to blend aesthetics with gameplay elements to enhance user engagement, <br />Charlene wishes to make it in the games industry as a narrative and interface designer.";
+            response = "An avid lover of both interaction design and storytelling, <br>Charlene Xu enjoys crafting engaging narrative experiences <br>through thoughtful design and gamification. As a graduate <br>of RMIT University's Bachelor's Degree of Design (Digital <br>Media), she has a great amount of interest and passion in <br>games and gamified experiences that can not only captivate <br>users, but also immerse them in the compelling narratives. <br>Willing to explore new innovative ways to blend aesthetics <br>with gameplay elements to enhance user engagement, Charlene <br>wishes to make it in the games industry as a narrative and <br>interface designer.";
             break;
         case 'ui designs':
             loadUIDesigns();
@@ -60,7 +60,7 @@ function handleCommand(command) {
 function loadUIDesigns() {
     const designs = [
         { 
-            url: 'https://embed.figma.com/proto/MTM3MlecblyoMoPfybAT7R/ShareCare-Backup?node-id=2-637&starting-point-node-id=2%3A637&embed-host=share', 
+            url: 'https://embed.figma.com/proto/MTM3MlecblyoMoPfybAT7R/ShareCare-Backup?node-id=29-2820&node-type=canvas&scaling=scale-down&content-scaling=fixed&page-id=29%3A2&starting-point-node-id=29%3A2820&embed-host=share', 
             text: 'ShareCare, a community app focused on sharing food with everyone.' 
         },
     ];
@@ -69,7 +69,7 @@ function loadUIDesigns() {
     
     designs.forEach(design => {
         output.innerHTML += `<div style="margin-top: 10px;">${design.text}</div>`;
-        output.innerHTML += `<iframe src="${design.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
+        output.innerHTML += `<iframe src="${design.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -84,7 +84,7 @@ function loadMinigames() {
         },
         { 
             url: 'https://scratch.mit.edu/projects/1075341974/embed', 
-            text: "Drifting Off: a game about sleep deprivation, and how it impacts your work." 
+            text: "Drifting Off: a game about fighting off sleep deprivation, a never-ending cycle you can't win against." 
         },
     ];
 
@@ -92,7 +92,7 @@ function loadMinigames() {
     
     games.forEach(game => {
         output.innerHTML += `<div style="margin-top: 10px;">${game.text}</div>`;
-        output.innerHTML += `<iframe src="${game.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
+        output.innerHTML += `<iframe src="${game.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -115,7 +115,7 @@ function loadARGs() {
     
     args.forEach(arg => {
         output.innerHTML += `<div style="margin-top: 10px;">${arg.text}</div>`;
-        output.innerHTML += `<iframe src="${arg.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
+        output.innerHTML += `<iframe src="${arg.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -138,7 +138,7 @@ function loadVideos() {
     
     videos.forEach(video => {
         output.innerHTML += `<div style="margin-top: 10px;">${video.text}</div>`;
-        output.innerHTML += `<iframe src="${video.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
+        output.innerHTML += `<iframe src="${video.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -161,7 +161,7 @@ function loadSimulations() {
     
     simulations.forEach(simulation => {
         output.innerHTML += `<div style="margin-top: 10px;">${simulation.text}</div>`;
-        output.innerHTML += `<iframe src="${simulation.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
+        output.innerHTML += `<iframe src="${simulation.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
@@ -198,7 +198,7 @@ function loadCV() {
     
     cvDocument.forEach(cv => {
         output.innerHTML += `<div style="margin-top: 10px;">${cv.text}</div>`;
-        output.innerHTML += `<iframe src="${cv.url}" style="width: 1000px; height: 750px; border: none; margin-top: 5px;"></iframe>`;
+        output.innerHTML += `<iframe src="${cv.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
     });
 
     output.innerHTML += `<br>`;
