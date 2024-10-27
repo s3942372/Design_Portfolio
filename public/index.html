@@ -28,22 +28,25 @@
     }
 
     #input {
-        width: 100%;
+        width: 99%;
         border: none;
         background: none;
         color: #00ff00;
-        outline: none;
+        outline: auto;
         font-family: monospace;
         font-size: 15px;
     }
 
     #input:focus {
-        outline: none;
+        outline: auto;
     }
 </style>
 
 <body>
     <div id="terminal">
+        <div>
+            <p>Welcome to Charlene's portfolio. Try typing 'help' for a list of commands.</p>
+        </div>
         <pre id="output"></pre>
         <input type="text" id="input" autofocus />
     </div>

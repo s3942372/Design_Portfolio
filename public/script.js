@@ -23,7 +23,7 @@ function handleCommand(command) {
             response = new Date().toString();
             break;
         case 'hello':
-            response = 'Hello, and welcome to my portfolio!';
+            response = "Hello, and welcome to Charlene's portfolio!";
             break;
         case 'about':
             loadAboutMe();
