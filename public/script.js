@@ -39,7 +39,7 @@ function handleCommand(command) {
 
     switch (command.toLowerCase()) {
         case 'help':
-            response = 'Available commands: help, clear, date, hello, about, ui, minigames, args, videos, simulations, contacts, cv';
+            response = 'Available commands: help, clear, date, hello, about, ui, minigames, games, args, videos, simulations, contacts, cv';
             break;
         case 'clear':
             output.innerHTML = '';
@@ -58,6 +58,9 @@ function handleCommand(command) {
             return;
         case 'minigames':
             loadMinigames();
+            return;
+        case 'games':
+            loadGames();
             return;
         case 'args':
             loadARGs();
@@ -121,7 +124,7 @@ function loadUIDesigns() {
 }
 
 function loadMinigames() {
-    const games = [
+    const miniGames = [
         { 
             url: 'https://scratch.mit.edu/projects/1075088739/embed', 
             text: "Punchin' Time!: a game about school violence, and the things that cause it." 
@@ -134,8 +137,34 @@ function loadMinigames() {
 
     output.innerHTML += `> minigames\nLoading Minigames...\n`;
     
+    miniGames.forEach(minigame => {
+        output.innerHTML += `<div style="margin-top: 10px;">${minigame.text}</div>`;
+        output.innerHTML += `<iframe src="${minigame.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
+    });
+
+    output.innerHTML += `<br>`;
+    output.scrollTop = output.scrollHeight;
+}
+
+function loadGames() {
+    const games = [
+        { 
+            url: 'https://player.vimeo.com/video/815986265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', 
+            text1: "Crisis: a card-swiping game about navigating through a global health crisis (that may or may not be inspired by the 2020 pandemic) while campaigning to be the president.",
+            text2: "Please note that this is only an idea, and that the game does not actually exist."
+        },
+        { 
+            url: 'https://player.vimeo.com/video/1023647432?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', 
+            text1: "Asylum: a game idea about about refugees, their lives, and the road to seeking asylum.",
+            text2: "Please note that this is only an idea, and that the game does not actually exist."
+        },
+    ];
+
+    output.innerHTML += `> games\nLoading Games...\n`;
+    
     games.forEach(game => {
-        output.innerHTML += `<div style="margin-top: 10px;">${game.text}</div>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${game.text1}</div>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${game.text2}</div>`;
         output.innerHTML += `<iframe src="${game.url}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
     });
 
