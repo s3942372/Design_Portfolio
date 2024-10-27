@@ -10,6 +10,7 @@ input.addEventListener('keypress', function(event) {
 });
 
 function handleCommand(command) {
+    output.innerHTML = '';
     let response;
 
     switch (command.toLowerCase()) {
