@@ -26,7 +26,7 @@ function handleCommand(command) {
             response = 'Hello, and welcome to my portfolio!';
             break;
         case 'about':
-            response = "An avid lover of both interaction design and storytelling, Charlene Xu enjoys crafting engaging narrative experiences through thoughtful design and gamification. Having studied at RMIT University in the Bachelor's Degree of Design (Digital Media), she has a great amount of interest and passion in games and gamified experiences that not only captivate users but also immerse them in compelling narratives. Willing to explore new innovative ways to blend aesthetics with gameplay elements to enhance user engagement, Charlene wishes to make it in the games industry as a narrative and interface designer.";
+            response = "An avid lover of both interaction design and storytelling, <br />Charlene Xu enjoys crafting engaging narrative experiences through thoughtful design and gamification. <br />Having studied at RMIT University in the Bachelor's Degree of Design (Digital Media), <br />she has a great amount of interest and passion in games and gamified experiences that not only captivate users but also immerse them in compelling narratives. <br />Willing to explore new innovative ways to blend aesthetics with gameplay elements to enhance user engagement, <br />Charlene wishes to make it in the games industry as a narrative and interface designer.";
             break;
         case 'ui designs':
             loadUIDesigns();
