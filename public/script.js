@@ -14,7 +14,7 @@ function handleCommand(command) {
 
     switch (command.toLowerCase()) {
         case 'help':
-            response = 'Available commands: help, clear, date, hello, about, ui designs, minigames, args, videos, simulations, contacts, cv';
+            response = 'Available commands: help, clear, date, hello, about, ui, minigames, args, videos, simulations, contacts, cv';
             break;
         case 'clear':
             output.innerHTML = '';
@@ -26,9 +26,9 @@ function handleCommand(command) {
             response = 'Hello, and welcome to my portfolio!';
             break;
         case 'about':
-            response = "An avid lover of both interaction design and storytelling, <br>Charlene Xu enjoys crafting engaging narrative experiences <br>through thoughtful design and gamification. As a graduate <br>of RMIT University's Bachelor's Degree of Design (Digital <br>Media), she has a great amount of interest and passion in <br>games and gamified experiences that can not only captivate <br>users, but also immerse them in the compelling narratives. <br>Willing to explore new innovative ways to blend aesthetics <br>with gameplay elements to enhance user engagement, Charlene <br>wishes to make it in the games industry as a narrative and <br>interface designer.";
-            break;
-        case 'ui designs':
+            loadAboutMe();
+            return;
+        case 'ui':
             loadUIDesigns();
             return;
         case 'minigames':
@@ -57,6 +57,25 @@ function handleCommand(command) {
     output.scrollTop = output.scrollHeight;
 }
 
+function loadAboutMe() {
+    const aboutMe = [
+        { 
+            img: '/public/media/me.jpg', 
+            text: "An avid lover of both interaction design and storytelling, <br>Charlene Xu enjoys crafting engaging narrative experiences <br>through thoughtful design and gamification. As a graduate <br>of RMIT University's Bachelor's Degree of Design (Digital <br>Media), she has a great amount of interest and passion in <br>games and gamified experiences that can not only captivate <br>users, but also immerse them in the compelling narratives. <br>Willing to explore new innovative ways to blend aesthetics <br>with gameplay elements to enhance user engagement, Charlene <br>wishes to make it in the games industry as a narrative and <br>interface designer."
+        },
+    ];
+
+    output.innerHTML += `> about\nLoading About Me...\n`;
+    
+    aboutMe.forEach(about => {
+        output.innerHTML += `<div style="margin-top: 10px;">${about.text}</div>`;
+        output.innerHTML += `<iframe src="${about.img}" style="width: 82.5vw; height: 95vh; border: none; margin-top: 5px;"></iframe>`;
+    });
+
+    output.innerHTML += `<br>`;
+    output.scrollTop = output.scrollHeight;
+}
+
 function loadUIDesigns() {
     const designs = [
         { 
@@ -65,7 +84,7 @@ function loadUIDesigns() {
         },
     ];
 
-    output.innerHTML += `> ui designs\nLoading UI Designs...\n`;
+    output.innerHTML += `> ui\nLoading UI Designs...\n`;
     
     designs.forEach(design => {
         output.innerHTML += `<div style="margin-top: 10px;">${design.text}</div>`;
