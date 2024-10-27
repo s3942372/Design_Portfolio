@@ -52,7 +52,7 @@ function handleCommand(command) {
 
     switch (command.toLowerCase()) {
         case 'help':
-            response = 'Available commands: help, clear, date, hello, about, ui, minigames, games, args, videos, simulations, contact, cv';
+            response = 'Available commands: help, clear, date, hello, about, ui, minigames, games, args, videos, simulations, socials, cv';
             helpDiv.innerHTML = response;
             helpDiv.style.display = 'block';
             break;
@@ -87,8 +87,8 @@ function handleCommand(command) {
         case 'simulations':
             loadSimulations();
             return;
-        case 'contact':
-            loadContactInfo();
+        case 'socials':
+            loadSocialMedia();
             return;
         case 'cv':
             loadCV();
@@ -259,18 +259,18 @@ function loadSimulations() {
     output.scrollTop = output.scrollHeight; 
 }
 
-function loadContactInfo() {
-    const contacts = [
+function loadSocialMedia() {
+    const socials = [
         { name: 'Twitter', url: 'https://x.com/c_xxy_xu' },
         { name: 'Instagram', url: 'https://www.instagram.com/c_xxy_xu?igsh=NTc4MTIwNjQ2YQ==' },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/in/charlene-xu/' },
         { name: 'GitHub', url: 'https://github.com/s3942372' },
     ];
 
-    output.innerHTML += `> contact\nLoading Contact Information...\n`;
+    output.innerHTML += `> socials\nLoading Social Medias...\n`;
     
-    contacts.forEach(contact => {
-        output.innerHTML += `<div style="margin-top: 10px;"><a href="${contact.url}" target="_blank" style="color: red;">${contact.name}</a></div>`;
+    socials.forEach(social => {
+        output.innerHTML += `<div style="margin-top: 10px;"><a href="${social.url}" target="_blank" style="color: red;">${social.name}</a></div>`;
     });
 
     output.innerHTML += `<br>`;
