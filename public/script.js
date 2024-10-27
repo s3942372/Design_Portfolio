@@ -9,7 +9,7 @@ function generateBinaryString() {
 function createBinaryLine() {
     const binaryLine = document.createElement('div');
     binaryLine.className = 'binary-string';
-    binaryLine.textContent = Array.from({ length: Math.floor(window.innerWidth) }, generateBinaryString).join('');
+    binaryLine.textContent = Array.from({ length: Math.floor(window.innerWidth / 8.26) }, generateBinaryString).join('');
     binaryLine.style.animationDuration = `${Math.random() * 5 + 5}s`;
     binaryLine.style.top = '100%';
 
