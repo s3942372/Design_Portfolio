@@ -105,7 +105,8 @@ function loadAboutMe() {
     const aboutMe = [
         { 
             img: '/media/me2.jpg', 
-            text: "An avid lover of both interaction design and storytelling, <br>Charlene Xu enjoys crafting engaging narrative experiences <br>through thoughtful design and gamification. As a graduate <br>of RMIT University's Bachelor's Degree of Design (Digital <br>Media), she has a great amount of interest and passion in <br>games and gamified experiences that can not only captivate <br>users, but also immerse them in the compelling narratives. <br>Willing to explore new innovative ways to blend aesthetics <br>with gameplay elements to enhance user engagement, Charlene <br>wishes to make it in the games industry as a narrative and <br>interface designer. <br><br>Email: charlene.xxy.xu@gmail.com"
+            text: "An avid lover of both interaction design and storytelling, <br>Charlene Xu enjoys crafting engaging narrative experiences <br>through thoughtful design and gamification. As a graduate <br>of RMIT University's Bachelor's Degree of Design (Digital <br>Media), she has a great amount of interest and passion in <br>games and gamified experiences that can not only captivate <br>users, but also immerse them in the compelling narratives. <br>Willing to explore new innovative ways to blend aesthetics <br>with gameplay elements to enhance user engagement, Charlene <br>wishes to make it in the games industry as a narrative and <br>interface designer. <br><br>Email: charlene.xxy.xu@gmail.com",
+            text1: "A photo of Charlene backstage during a production. Her <br>love of creating stories is in part due to her nature as a <br>theatre kid."
         },
     ];
 
@@ -114,6 +115,7 @@ function loadAboutMe() {
     aboutMe.forEach(about => {
         output.innerHTML += `<div style="margin-top: 10px;">${about.text}</div>`;
         output.innerHTML += `<img src="${about.img}" style="width: 35%; height: auto; border: none; margin-top: 5px;"></iframe>`;
+        output.innerHTML += `<div style="margin-top: 10px;">${about.text1}</div>`;
     });
 
     output.innerHTML += `<br>`;
