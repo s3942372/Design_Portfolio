@@ -2,6 +2,19 @@ const output = document.getElementById('output');
 const input = document.getElementById('input');
 const binaryBackground = document.getElementById('binaryBackground');
 
+const helpDiv = document.createElement('div');
+helpDiv.id = 'helpMessage';
+helpDiv.style.display = 'none';
+helpDiv.style.position = 'fixed';
+helpDiv.style.top = '10px';
+helpDiv.style.right = '10px';
+helpDiv.style.color = 'rgba(255, 0, 0)';
+helpDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+helpDiv.style.border = '1px solid black';
+helpDiv.style.padding = '10px';
+helpDiv.style.zIndex = '1000';
+document.body.appendChild(helpDiv);
+
 function generateBinaryString() {
     return Math.random() < 0.5 ? '0' : '1';
 }
@@ -40,9 +53,12 @@ function handleCommand(command) {
     switch (command.toLowerCase()) {
         case 'help':
             response = 'Available commands: help, clear, date, hello, about, ui, minigames, games, args, videos, simulations, contacts, cv';
+            helpDiv.innerHTML = response;
+            helpDiv.style.display = 'block';
             break;
         case 'clear':
             output.innerHTML = '';
+            helpDiv.style.display = 'none';
             return;
         case 'date':
             response = new Date().toString();
