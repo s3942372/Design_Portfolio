@@ -52,7 +52,7 @@ function handleCommand(command) {
 
     switch (command.toLowerCase()) {
         case 'help':
-            response = 'Available commands: help, clear, date, hello, about, ui, minigames, games, args, videos, simulations, contacts, cv';
+            response = 'Available commands: help, clear, date, hello, about, ui, minigames, games, args, videos, simulations, contact, cv';
             helpDiv.innerHTML = response;
             helpDiv.style.display = 'block';
             break;
@@ -87,7 +87,7 @@ function handleCommand(command) {
         case 'simulations':
             loadSimulations();
             return;
-        case 'contacts':
+        case 'contact':
             loadContactInfo();
             return;
         case 'cv':
@@ -267,7 +267,7 @@ function loadContactInfo() {
         { name: 'GitHub', url: 'https://github.com/s3942372' },
     ];
 
-    output.innerHTML += `> contact\nLoading Contact Info...\n`;
+    output.innerHTML += `> contact\nLoading Contact Information...\n`;
     
     contacts.forEach(contact => {
         output.innerHTML += `<div style="margin-top: 10px;"><a href="${contact.url}" target="_blank" style="color: red;">${contact.name}</a></div>`;
