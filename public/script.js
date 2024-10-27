@@ -1,5 +1,29 @@
 const output = document.getElementById('output');
 const input = document.getElementById('input');
+const binaryBackground = document.getElementById('binaryBackground');
+
+function generateBinaryString() {
+    return Math.random() < 0.5 ? '0' : '1';
+}
+
+function createBinaryLine() {
+    const binaryLine = document.createElement('div');
+    binaryLine.className = 'binary-string';
+    binaryLine.textContent = Array.from({ length: Math.floor(window.innerWidth / 8.25) }, generateBinaryString).join('');
+    binaryLine.style.animationDuration = `${Math.random() * 5 + 5}s`;
+    binaryLine.style.top = '100%';
+
+    binaryBackground.appendChild(binaryLine);
+
+    binaryLine.style.animationName = 'trickle';
+    binaryLine.style.top = `${Math.random() * 100}%`;
+
+    setTimeout(() => {
+        binaryLine.remove();
+    }, 10000);
+}
+
+setInterval(createBinaryLine, 500);
 
 input.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
